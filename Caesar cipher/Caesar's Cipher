@@ -1,0 +1,34 @@
+#Basic variable of all letters and white space
+symbols = "ABCDEFGHIJKLMOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+
+#Welcome Text
+print("Caesar Cipher")
+print("Would you like to encrypt or decrypt")
+
+#Local Variables
+mode = input("Enter e or d: ")
+key = int(input("Enter your key (integer between 1-53)"))
+message = input("Enter your message:")
+translated = ""
+
+#Encryption Protocol
+if mode == "e":
+  for letter in message:
+    letterindex = symbols.find(letter)
+    letterindex += key
+    if letterindex < len(symbols):
+      translated += symbols[letterindex]
+    elif letterindex >= len(symbols):
+      translated += symbols[letterindex - len(symbols)]
+
+#Decryption Protocol
+if mode == "d":
+  for letter in message:
+    letterindex = symbols.find(letter)
+    letterindex -= key
+    if letterindex < len(symbols):
+      translated += symbols[letterindex]
+    elif letterindex >= len(symbols):
+      translated -= symbols[letterindex - len(symbols)]
+
+print(translated)
