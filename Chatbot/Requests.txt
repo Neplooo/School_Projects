@@ -1,0 +1,10 @@
+Greeting: Heya, how’s it going?
+
+1.	Who’s your favorite musician?
+2.	You good at cooking?
+3.	You know how to drive?
+4.	What’s your favorite season?
+
+•	(Modified) Added a what is your name question so robot can function more efficiently.
+•	(Modified) Added some generic responses
+•	(Modified) Added An Easter Egg 😉
