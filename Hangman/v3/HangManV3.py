@@ -1,5 +1,6 @@
 #-Libraries-#
 import random
+import pwinput
 
 
 
@@ -75,7 +76,7 @@ if game == "computer":
   word = random.choice(words).lower()
 elif game == "human":
   print("Put a word in and then pass it to a friend and let them play!")
-  word = input("Type a word: ").lower()
+  word = pwinput.pwinput(prompt="Type a Word: ").lower()
 
 print("Lets Play Hangman:")
 
