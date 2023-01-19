@@ -65,31 +65,30 @@ words = ('ant baboon badger bat bear beaver camel cat clam cobra cougar '
 
 print("Lets Play Hangman!")
 
-#Print Empty Gallows
-print(hangmanPics[0])
+#print(hangmanPics[0])
+#this is good just not needed for this part so I just commeted of for teh time being
 
-#Print a word
 word = random.choice(words)
 
-#Set it so that no body is there
 lives = 0
 
-#Random Debug Crap
 wordList = list(word)
-print(word)
+
+#print(word)
+#I don't think this is nessarcy - you got the word list, why this
 print(wordList)
 
-#Starts Game after the setup is done
 game = True
 
 while game == True:
-#Frontend Guessing Prompt
   print("Guess a letter:")
+
   guess = input("-->")
 
+  solveword = guess
 
-#If the letter is in the word, Congrat them that they got the letter and go back to guess prompt. Also puts the letter into the solveword bracket.
   if guess in word:
     print("Congrats, you guessed a letter!")
-    solveword += guess
+    #solveword += guess
+    #if you do this you geet *bb* instead of *b*
     print(solveword)
