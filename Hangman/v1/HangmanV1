@@ -1,0 +1,94 @@
+#---Hang Man---#
+
+import random
+import string
+
+hangmanPics = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+
+#Word bank of animals
+words = ('ant baboon badger bat bear beaver camel cat clam cobra cougar '
+      'coyote crow deer dog donkey duck eagle ferret fox frog goat '
+      'goose hawk lion lizard llama mole monkey moose mouse mule newt '
+      'otter owl panda parrot pigeon python rabbit ram rat raven '
+      'rhino salmon seal shark sheep skunk sloth snake spider '
+      'stork swan tiger toad trout turkey turtle weasel whale wolf '
+      'wombat zebra ').split()
+
+print("Lets Play Hangman!")
+
+print(hangmanPics[0])
+
+word = random.choice(words)
+
+lives = 0
+
+wordList = list(word)
+
+print(word)
+
+print(wordList)
+
+game = True
+
+while game == True:
+  print("Guess a letter:")
+
+  guess = input("-->")
+
+  solveword = guess
+
+  if guess in word:
+    print("Congrats, you guessed a letter!")
+    solveword += guess
+    print(solveword)
+
+
