@@ -1,0 +1,183 @@
+<!doctype HTML>
+<html style="background-color:#0e0e0e;">
+	<head>
+		<title>All About Thomas</title>
+	</head>
+	<style>
+
+		.text {
+
+    		text-align: center;
+			color: white;
+			font-family: "Open Sans";
+
+		}
+
+		.title {
+
+			text-align: center;
+			color: white;
+			font-family: "Open Sans";
+
+		}
+
+		.subtitle {
+
+			text-align: center;
+			color: white;
+			font-family: "Open Sans";
+
+		}
+
+		.line {
+
+			border-color: white;
+			background-color: white;
+			height: 2px;
+
+		}
+
+	</style>
+	<body>
+
+		<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+		<link rel="stylesheet" href="Chatbot\v2\style.css"/>
+		<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+
+		<h1 class="title">All About Thomas</h1>
+			<p class="text">I am new to HTML and I am creating this webpage to share a little about myself</p>
+		<hr class="line"
+		>
+		<h2 class="subtitle">Why Am I Interested in Coding?</h2>
+			<p class="text">While I have my eyes set on programming and I took this class only because I needed a comp-sci credit, I have actually quite enjoyed learning HTML. There's an indescribable satisfaction of building up a website with nothing but music, knowledge, and <strong>sheer force of will</strong>. 
+			<br>
+			The main reason I have an interest in programming at all is to fufill my <em>&star;&star;&star;dream&star;&star;&star;</em> of making a video game. My friend Augusto has a lot of ideas and wants to make them real. As of now I only contribute concept art and general design advice but I want to contribute more. Thus I began to learn Python.</p>
+		<hr class="line"
+		>
+		<h2 class="subtitle">Hobbies and Interests</h2>
+			<ul>
+				<li class="text"><strong>Retro FPS Games: </strong>For the past the two years I have been obsessed with late 90s-early 2000s era shooters like Half-Life, Doom, and Quake. As of recently there have been a resurgence of these type of games and they have been the best I've ever played.</li>
+					<br>
+				<li class="text"><strong>DOOM: </strong>Specifically Doom 2. While this should fall under Retro FPS games, with how much I have played, it very easily dwarves about every other game. There is an incredbily active modding scene that has been going since the 90s and they've created some of the best gaming experiences I've ever had. The way authors are able to take something as simple as 11 monsters and stretch them to their absolute limits never, <strong>EVER</strong> ceases to amaze me. I have also made some incredibly close friends through Doom 2 (i.e. the previously mentioned Augusto). The game is truly something special to me.</li>
+					<br>
+				<li class="text"><strong>Art and Writing: </strong>I have always doodled on my work paper, notebooks, or just any sort of surface that can hold granite. Eventually I got a sketchbook to hold my drawings so that I wont't cover all my school work. I typically draw whenever I'm at school as I have a flat surface, music, and <em>lots</em> of free time. If I'm not drawing then I'm letting music create these huge and vast landscapes and conflicts. I eventually began to focus these daydreams into something. For the past 8 months, I've been laying the groundwork for a webcomic. I've made massive strides. As of 10/4/22, I finished the first draft of the plot, which is a lot considering I only think about it through daydreams. I'm really happy with how it's going and I hope that someday I'll be able to make it from a daydream into something real.</li>
+			</ul>
+		<hr class="line">
+		<h2 class="subtitle">Life Goals</h2>
+			<p class="text">I have a very long bucket list of things I wish to accomplish but a summary would be to have a successful career in video editing and production, get married, buy a house, and (possibly) have kids. While it has taken a backseat to school in recent times, I typically would spend every weekend editing a video and cultivating a portfolio. Once I graduate from high school, I plan on taking a year to celebrate, work a job, figure out any finalizations to my plans, and hone my craft, afterwhich I will enroll in Midlands Technical College's video editting course. Once I'm finished with that, I will hopefully be either working freelance or with a company/contractor, with my own home, and living by myself. Although in recent times with how things have been going, I have been filing through this plan and seeing how it will really turn out the way I expect. I like to dream big but I'm also realistic. A more likely outcome is that I will work at a movie theater and make enough to move out on my own, doing editing as a side gig/hobby. Hopefully I'll make enough money doing freelance work (or art possibly) to do it full time but the more I ponder and consider it, the less likely it seems. Either way I'm hopeful for my future and I feel happy knowing that I'm already better off than most of my friends.
+			</p>
+
+			<hr class="line">
+			<h2 class="subtitle">The Chatbot</h3>
+
+
+				<p class="text">Heya, How's it going?</p>
+
+				<p id="answer1" class="text"></p>
+				<p id="answer2", class="text"></p>
+				<p id="answer3", class="text"></p>
+				<p id="answer4", class="text"></p>
+				<p id="answer5", class="text"></p>
+
+				<p id="questions" class="text">What is your name?</p>
+
+			<div style="text-align:center;">
+
+				<input type="text" id="answer" name="answer"/>
+				<br>
+				<br>
+				<input type="submit" id="enterBtn" value="Submit"/>
+
+			</div>
+
+		<py-script>
+
+		
+			from js import document
+			from pyodide import create_proxy
+
+			question = 1
+
+			def answer(e):
+				def name(e):
+					global question
+					inp = Element("answer").element
+					name = inp.value
+					pyscript.write("answer1", "Hello " + name + ", I am delighted to meet you!")
+					pyscript.write("questions", "Who is your favorite musician?")
+					inp.value = ""
+					question = 2
+
+				def music(e):
+					global question
+					inp = Element("answer").element
+					musician = inp.value
+					pyscript.write("answer2", musician + " Is a pretty cool perfomer!")
+					pyscript.write("questions", "Are you good at cooking?")
+					inp.value = ""
+					question = 3
+				
+				def cooking(e):
+					global question
+					inp = Element("answer").element
+					cook = inp.value.lower()
+					if cook == "yes":
+						pyscript.write("answer3", "Nice, I like cooking too!")
+					else:
+						pyscript.write("answer3", "Understandable, cooking is not for everyone.")
+					pyscript.write("questions", "Do you know how to drive?")
+					inp.value = ""
+					question = 4
+				
+				def driving(e):
+					global question
+					inp = Element("answer").element
+					drive = inp.value.lower()
+					if drive == "yes":
+						pyscript.write("answer4", "Cool, I can Drive Too")
+					elif drive == "no":
+						pyscript.write("answer4", "It's ok, everyone will learn how to drive eventually.")
+					elif drive == "i drive drunk" or drive == "i drive illegaly":
+						pyscript.write("answer4", "No! Don't break the law!")
+					pyscript.write("questions", "What is your favorite season?")
+					inp.value = ""
+					question = 5
+
+				def seasons(e):
+					global question
+					inp = Element("answer").element
+					season = inp.value.lower()
+					if season == "spring":
+						pyscript.write("answer5", "Awesome, Spring is a nice season!")
+					elif season == "summer":
+						pyscript.write("answer5", "I love summer, going to the beach is my favorite!")
+					elif season == "fall":
+						pyscript.write("answer5", "Great, I love watching the leaves fall!")
+					elif season == "winter":
+						pyscript.write("answer5", "Winter is a nice season, like when it snows!")
+					pyscript.write("questions", "It was great getting to know you, see you soon!")
+					inp.value = ""
+					question = 6
+
+				if question == 1:
+					name(e)
+				elif question == 2:
+					music(e)
+				elif question == 3:
+					cooking(e)
+				elif question == 4:
+					driving(e)
+				elif question == 5:
+					seasons(e)
+
+			answer_proxy = create_proxy(answer)
+			enter_button = document.getElementById("enterBtn")
+			enter_button.addEventListener("click", answer_proxy)
+
+
+		</py-script>
+		
+	</body>
+
+</html>
