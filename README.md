@@ -16,4 +16,4 @@ Hangman
 
 Chatbot
 
-![Chatbot](https://i.ibb.co/tbX7gQy/Chatbot.png)
+![image](https://user-images.githubusercontent.com/113266554/214356217-83946d17-b23c-48ef-894f-13034459b6df.png)
