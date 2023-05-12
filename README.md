@@ -25,3 +25,8 @@ ChatbotV3
 Tic Tac Toe
 
 ![image](https://user-images.githubusercontent.com/113266554/222453409-e1b93634-603c-4744-945e-987aed579d82.png)
+
+Snake Game
+
+![image](https://github.com/Neplooo/School_Projects/assets/113266554/4921e941-f9e0-4ca3-a922-b4309382dd14)
+
