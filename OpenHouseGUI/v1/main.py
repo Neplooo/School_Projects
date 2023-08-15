@@ -7,12 +7,12 @@ from tkinter import ttk
 root = tk.Tk()
 root.geometry("1920x1080")
 root.attributes("-fullscreen", True)
-root.iconbitmap("C:/Users/Albert.Mathisz/Downloads/W.ico")
+root.iconbitmap("Icon/Path/Here")
 #root.configure(background="Blue")
 root.columnconfigure(1, weight=1)
 
 #Add a background image to make stuff look snazzy
-backgroundImage = tk.PhotoImage(file="C:/Users/Albert.Mathisz/Downloads/background.png")
+backgroundImage = tk.PhotoImage(file="Background/Path/Here")
 backgroundLabel = tk.Label(root, image=backgroundImage)
 backgroundLabel.place(x=0, y=0, relwidth=1, relheight=1)
 
