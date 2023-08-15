@@ -1,4 +1,5 @@
 #--Import Stuff--#
+import os
 import tkinter as tk
 from tkinter import ttk
 
@@ -6,13 +7,19 @@ from tkinter import ttk
 root = tk.Tk()
 root.geometry("1920x1080")
 root.attributes("-fullscreen", True)
+root.iconbitmap("C:/Users/Albert.Mathisz/Downloads/W.ico")
 #root.configure(background="Blue")
-
 root.columnconfigure(1, weight=1)
+
+#Add a background image to make stuff look snazzy
+backgroundImage = tk.PhotoImage(file="C:/Users/Albert.Mathisz/Downloads/background.png")
+backgroundLabel = tk.Label(root, image=backgroundImage)
+backgroundLabel.place(x=0, y=0, relwidth=1, relheight=1)
 
 #Create Title Label
 titleLabel = tk.Label(root, text="GTCHS Open House", font=("Calibri", 25))
 titleLabel.grid(row=0, column=1)
+
 
 #Create Subtittle Label for Videos
 videoLabel = tk.Label(root, text="Videos", font=("Calibri", 15))
@@ -27,7 +34,7 @@ pictureLabel = tk.Label(root, text="Pictures", font=("Calibri", 15))
 pictureLabel.grid(row=2, column=2)
 
 #Create Label Frame to act as columns
-videoLF = tk.Frame(root, borderwidth=2, relief="flat")
+videoLF = tk.LabelFrame(root, text="Alignment")
 gameLF = tk.LabelFrame(root, padx=20, pady=20)
 pictureLF = tk.LabelFrame(root)
 
@@ -36,8 +43,16 @@ videoLF.grid(row=3, column=0)
 gameLF.grid(row=3, column=1)
 pictureLF.grid(row=3, column=2)
 
-#Add content into Label Frames
-testLabel = tk.Label(gameLF, text="Test")
+#Add content into Video Label Frame
+videoButton = tk.Button(videoLF, text="Test Video", command=os.system("C:/Users/Albert.Mathisz/Downloads/LinearProgrammingProject.mp4"))
+videoButton.grid(row=0, column=0)
+
+#Add content into Game Label Frame
+testButton = tk.Button(gameLF, text="Test", command=os.system("C:/Users/Albert.Mathisz/Downloads/Snake.py"))
+testButton.grid(row=0, column=0)
+
+#Add content into Picture Label Frame
+
 
 #Launch the window
 root.mainloop()
