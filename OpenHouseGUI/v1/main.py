@@ -44,11 +44,11 @@ gameLF.grid(row=3, column=1)
 pictureLF.grid(row=3, column=2)
 
 #Add content into Video Label Frame
-videoButton = tk.Button(videoLF, text="Test Video", command=os.system("C:/Users/Albert.Mathisz/Downloads/LinearProgrammingProject.mp4"))
+videoButton = tk.Button(videoLF, text="Test Video", command=os.system("Video/Path/Here"))
 videoButton.grid(row=0, column=0)
 
 #Add content into Game Label Frame
-testButton = tk.Button(gameLF, text="Test", command=os.system("C:/Users/Albert.Mathisz/Downloads/Snake.py"))
+testButton = tk.Button(gameLF, text="Test", command=os.system("Game/Path/Here"))
 testButton.grid(row=0, column=0)
 
 #Add content into Picture Label Frame
