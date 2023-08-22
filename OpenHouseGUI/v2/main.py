@@ -121,4 +121,4 @@ while running:
 
 pygame.quit()
 
-# Template Given by Isaac Bugo, Comments and codew improvements made by Albert Mathisz
+# Template Given by Acrux, Comments and codew improvements made by Neplo
