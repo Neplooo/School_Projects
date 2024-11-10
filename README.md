@@ -2,6 +2,8 @@
 
 ### Random projects that I have done for school.
 
+~Note that most Java things that I have done are just to learn syntax~
+
 Ceasar's Cipher
 
 ![Ceasar's Cipher](https://i.ibb.co/pbkwqwZ/Cesar-s-Cipher.png)
