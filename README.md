@@ -32,6 +32,8 @@ ChatbotV3
 
 ![image](https://user-images.githubusercontent.com/113266554/214452222-2552250a-b1af-4d99-b051-e7fc7160b065.png)
 
+* Thomas was a customer of mine
+
 ---
 
 Tic Tac Toe
