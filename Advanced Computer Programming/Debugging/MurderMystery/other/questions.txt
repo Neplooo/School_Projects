@@ -1,0 +1,10 @@
+Who was the murderer? (Check Debugger) -> Mr. Brown
+How many items spawned? (Items ArrayList) -> 8
+How many rooms where there? (Room array) -> 15
+Who moved first each turn? (First person in the array) -> Mademoiselle Mercury
+How many murder wepons were used? -> 4
+What room did the lead pipe get dropped first? -> Sewing Room
+How many players were alive at 7:40pm? -> 4
+What time did the Lead Pipe get picked up first? (XX:XXpm form) -> 06:00pm
+What line number in Mansion.java decides the murderer cooldown? (147?) -> 147
+What line number in the nextTurn() method decides how many moves the player gets? (110?) -> 110
